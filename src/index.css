@@ -1,13 +1,74 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	background-color: #fafafa;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+input {
+	border: 2px solid #ddd;
+	border-radius: .25rem;
+	box-sizing: border-box;
+	color: grey;
+	font-size: 1rem;
+	padding: .5rem;
+	width: 100%;
+}
+
+#root {
+	padding: 2.5rem 2rem;
+}
+
+.card-grid {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.card {
+	background-color: #fff;
+	border-radius: .5rem;
+	box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .15);
+	margin: 0 .5rem 1rem;
+	overflow: hidden;
+	transition: all .5s;
+	width: 32%;
+}
+
+.card-img {
+	height: 200px;
+	overflow: hidden;
+	width: 100%;
+}
+
+.card-img img {
+	width: 100%;
+}
+
+.card-title {
+	color: #666;
+	font-size: .75rem;
+	padding: .2rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.card:hover {
+	box-shadow: 0 .25rem 1rem rgba(0, 0, 0, .5);
+	transform: scale(1.15);
+	z-index: 1;
+}
+
+.card:hover .card-img {
+	height: auto;
+	text-align: center;
+}
+
+.card:hover .card-img img {
+	width: auto;
 }
